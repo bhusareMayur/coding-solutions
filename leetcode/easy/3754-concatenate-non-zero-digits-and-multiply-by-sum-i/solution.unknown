@@ -1,48 +1,30 @@
 1class Solution {
-2    public int divisibleGame(int[] nums) {
+2    public int maxDigitRange(int[] nums) {
 3        int n = nums.length;
-4        Set<Integer> st = new HashSet<>();
-5
-6        for(int i = 0 ; i <n;i++){
-7            int t = nums[i];
-8
-9            for(int j = 2;j*j <= t;j++){
-10                if(t%j == 0){
-11                    st.add(j);
-12                    while(t % j == 0) t/=j;
-13                }
-14            }
-15            if(t>1) st.add(t);
-16        }
-17
-18        if(st.isEmpty()) st.add(2);
+4
+5        int maxi = -1;
+6        int ans = 0;
+7
+8        for(int i = 0 ; i < n;i++){
+9            int t= nums[i];
+10            int mini = 9;
+11            int maxD = 0;
+12
+13            while(t>0){
+14                int d = t%10;
+15                if(d<mini) mini = d;
+16                if(d>maxD) maxD = d;
+17                t/=10;
+18            }
 19
-20        long b = Long.MIN_VALUE;
-21        int kAns = -1;
-22
-23        for(int k:st){
-24            long curr = 0;
-25            long maxi = Long.MIN_VALUE;
-26            
-27            for(int x:nums){
-28                curr += (x % k == 0) ? x : -x;
-29                if(curr > maxi ) maxi = curr;
-30
-31                if(curr < 0) curr = 0;
-32            }
-33            if(maxi > b || (maxi == b && k < kAns)){
-34                b = maxi;
-35                kAns = k;
-36                
-37            }
-38        }
-39
-40        long mod = 1_000_000_007L;
-41        
-42        long ans = (((b % mod + mod) % mod) * kAns % mod);
-43
-44        return (int)ans;
-45        
-46        
-47    }
-48}
+20            int diff = maxD - mini;
+21            if(diff > maxi){
+22                maxi = diff;
+23                ans = nums[i];
+24            }else if(diff == maxi){
+25                ans += nums[i];
+26            }
+27        }
+28        return ans;
+29    }
+30}
