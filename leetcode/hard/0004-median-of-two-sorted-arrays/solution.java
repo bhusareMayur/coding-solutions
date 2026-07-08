@@ -21,6 +21,18 @@ class Solution {
             }
             k++;
         }
+       while(k <= (mn / 2) && i < m ) {
+        prev = curr;
+         curr = nums1[i];
+        i++;
+        k++;
+       }
+       while(k <= (mn / 2) && j < n ) {
+        prev = curr;
+         curr = nums2[j];
+        j++;
+        k++;
+       }
         System.out.println("curr : "+curr);
         System.out.println("Prev : "+prev);
     if(mn % 2 == 0){
