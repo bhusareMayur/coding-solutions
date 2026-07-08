@@ -5,8 +5,8 @@ class Solution {
         int n = nums2.length;
         int mn = m+n;
 
-        int prev = 0;
-        int curr = 0;
+        int prev = nums1[0];
+        int curr = nums1[0];
         int i = 0 ; 
         int j = 0;
         int k = 0;
@@ -21,6 +21,8 @@ class Solution {
             }
             k++;
         }
+        System.out.println("curr : "+curr);
+        System.out.println("Prev : "+prev);
     if(mn % 2 == 0){
         return (double)( prev + curr ) / 2.0;
     }
