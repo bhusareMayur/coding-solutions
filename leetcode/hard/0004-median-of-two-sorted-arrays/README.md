@@ -43,8 +43,8 @@ Explanation: merged array = [1,2,3,4] and median is (2 + 3) / 2 = 2.5.
 
 **Language:** Java  
 **Runtime:** 2 ms  
-**Memory:** 45.4 MB  
-**Submitted:** 2026-07-08T07:17:16.162Z  
+**Memory:** 45.1 MB  
+**Submitted:** 2026-07-08T07:19:50.231Z  
 
 ```java
 class Solution {
@@ -70,6 +70,18 @@ class Solution {
             }
             k++;
         }
+       while(k <= (mn / 2) && i < m ) {
+        prev = curr;
+         curr = nums1[i];
+        i++;
+        k++;
+       }
+       while(k <= (mn / 2) && j < n ) {
+        prev = curr;
+         curr = nums2[j];
+        j++;
+        k++;
+       }
         System.out.println("curr : "+curr);
         System.out.println("Prev : "+prev);
     if(mn % 2 == 0){
