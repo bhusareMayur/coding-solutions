@@ -15,7 +15,7 @@ class Solution {
             }
         }
 
-        if(!st.isEmpty()){
+        while(!st.isEmpty()){
             st.pop();
             count++;
         }
