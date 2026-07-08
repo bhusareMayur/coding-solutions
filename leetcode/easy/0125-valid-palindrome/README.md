@@ -49,8 +49,8 @@ Since an empty string reads the same forward and backward, it is a palindrome.
 
 **Language:** Java  
 **Runtime:** 0 ms  
-**Memory:** 42.5 MB  
-**Submitted:** 2026-07-08T09:37:08.376Z  
+**Memory:** 42.4 MB  
+**Submitted:** 2026-07-08T09:37:47.271Z  
 
 ```java
 class Solution {
@@ -62,7 +62,7 @@ class Solution {
             char c2 = s.charAt(j);
             if ((c < 'a' && c > 'z') || (c < 'A' && c > 'Z')) i++;
             if ((c2 < 'a' && c2 > 'z') || (c2 < 'A' && c2 > 'Z')) j--;
-            if(Character.toLowerCase(s.charAt(i)) == Character.toLowerCase(s.charAt(j))) return false;
+            if(Character.toLowerCase(s.charAt(i)) != Character.toLowerCase(s.charAt(j))) return false;
             i++;
             j--;
         }
