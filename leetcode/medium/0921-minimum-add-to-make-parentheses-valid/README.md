@@ -45,8 +45,8 @@ Output: 3
 
 **Language:** Java  
 **Runtime:** 0 ms  
-**Memory:** 42.4 MB  
-**Submitted:** 2026-07-08T05:39:45.642Z  
+**Memory:** 42.6 MB  
+**Submitted:** 2026-07-08T05:48:21.731Z  
 
 ```java
 class Solution {
@@ -66,7 +66,7 @@ class Solution {
             }
         }
 
-        if(!st.isEmpty()){
+        while(!st.isEmpty()){
             st.pop();
             count++;
         }
