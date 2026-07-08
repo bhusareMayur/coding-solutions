@@ -45,8 +45,8 @@ Output: 3
 
 **Language:** Java  
 **Runtime:** 0 ms  
-**Memory:** 42.6 MB  
-**Submitted:** 2026-07-08T05:38:02.112Z  
+**Memory:** 42.4 MB  
+**Submitted:** 2026-07-08T05:39:45.642Z  
 
 ```java
 class Solution {
@@ -58,7 +58,7 @@ class Solution {
             if(s.charAt(i) == '('){
                 st.push(i);
             }else{
-                if(s.charAt(st.peek()) == ')'){
+                if(!st.isEmpty()){
                     st.pop();
                 } else{
                     count++;
