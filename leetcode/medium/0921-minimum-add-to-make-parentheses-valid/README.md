@@ -46,20 +46,31 @@ Output: 3
 **Language:** Java  
 **Runtime:** 0 ms  
 **Memory:** 42.6 MB  
-**Submitted:** 2026-07-08T05:32:34.347Z  
+**Submitted:** 2026-07-08T05:38:02.112Z  
 
 ```java
 class Solution {
     public int minAddToMakeValid(String s) {
         int n = s.length();
-        int O = 0;
-        int C = 0;
-        for(int i = 0;i<n;i++){
-            if(s.charAt(i) == '(') O++;
-            else C++;
+        Stack<Integer> st = new Stack<>();
+        int count = 0;
+        for(int i = 0 ; i < n;i++){
+            if(s.charAt(i) == '('){
+                st.push(i);
+            }else{
+                if(s.charAt(st.peek()) == ')'){
+                    st.pop();
+                } else{
+                    count++;
+                }
+            }
         }
-        return Math.abs(C-O);
-        
+
+        if(!st.isEmpty()){
+            st.pop();
+            count++;
+        }
+        return count;   
     }
 }
 ```
