@@ -59,7 +59,7 @@ Explanation: The original array was [11,13,15,17] and it was rotated 4 times.
 **Language:** Java  
 **Runtime:** 0 ms  
 **Memory:** 42.2 MB  
-**Submitted:** 2026-07-08T08:54:50.826Z  
+**Submitted:** 2026-07-08T08:57:49.684Z  
 
 ```java
 class Solution {
@@ -67,19 +67,18 @@ class Solution {
        int n = nums.length;
        int s = 0;
        int e = n-1;
-       int ans = 0;
+       int ans = nums[0];
        
        while(s<=e){
         int mid = ( s + e ) / 2;
 
-        if(nums[mid] > nums[0]){
+        if(nums[mid] >= nums[0]){
             s = mid + 1;
         }
-        else if(nums[mid] < nums[0]){
+        else{
             e = mid - 1;
+            ans = nums[mid];
         }
-        ans = nums[mid];
-        if(s==e) ans = nums[s];
        }
     return ans;
     }
