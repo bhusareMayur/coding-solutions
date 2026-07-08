@@ -15,6 +15,7 @@ class Solution {
             for (Map.Entry<Integer, Integer> e : map.entrySet()) {
                 if(maxiF < e.getValue()){
                     maxi = e.getKey();
+                    maxiF = e.getValue();
                 }else continue;
             } 
             map.put(maxi , 0);
