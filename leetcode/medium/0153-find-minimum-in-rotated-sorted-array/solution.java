@@ -14,6 +14,7 @@ class Solution {
         else if(nums[mid] < nums[0]){
             e = mid - 1;
         }
+        ans = nums[mid];
         if(s==e) ans = nums[s];
        }
     return ans;
