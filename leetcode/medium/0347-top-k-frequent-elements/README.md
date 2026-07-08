@@ -43,8 +43,8 @@ Given an integer array `nums` and an integer `k`, return  *the*  `k`  *most freq
 
 **Language:** Java  
 **Runtime:** 0 ms  
-**Memory:** 43 MB  
-**Submitted:** 2026-07-08T08:18:45.159Z  
+**Memory:** 42.9 MB  
+**Submitted:** 2026-07-08T08:19:43.777Z  
 
 ```java
 class Solution {
@@ -64,6 +64,7 @@ class Solution {
             for (Map.Entry<Integer, Integer> e : map.entrySet()) {
                 if(maxiF < e.getValue()){
                     maxi = e.getKey();
+                    maxiF = e.getValue();
                 }else continue;
             } 
             map.put(maxi , 0);
