@@ -7,7 +7,7 @@ class Solution {
             if(s.charAt(i) == '('){
                 st.push(i);
             }else{
-                if(s.charAt(st.peek()) == ')'){
+                if(!st.isEmpty()){
                     st.pop();
                 } else{
                     count++;
