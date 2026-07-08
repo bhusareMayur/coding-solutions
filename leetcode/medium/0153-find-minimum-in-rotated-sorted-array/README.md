@@ -57,9 +57,9 @@ Explanation: The original array was [11,13,15,17] and it was rotated 4 times.
 ## Solution
 
 **Language:** Java  
-**Runtime:** 0 ms  
-**Memory:** 42.3 MB  
-**Submitted:** 2026-07-08T08:44:28.931Z  
+**Runtime:** 0 ms (beats 100.00%)  
+**Memory:** 43.5 MB (beats 93.49%)  
+**Submitted:** 2026-07-08T08:44:33.684Z  
 
 ```java
 class Solution {
