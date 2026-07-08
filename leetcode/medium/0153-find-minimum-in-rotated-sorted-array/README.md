@@ -58,8 +58,8 @@ Explanation: The original array was [11,13,15,17] and it was rotated 4 times.
 
 **Language:** Java  
 **Runtime:** 0 ms  
-**Memory:** 42.4 MB  
-**Submitted:** 2026-07-08T08:54:17.791Z  
+**Memory:** 42.2 MB  
+**Submitted:** 2026-07-08T08:54:50.826Z  
 
 ```java
 class Solution {
@@ -78,6 +78,7 @@ class Solution {
         else if(nums[mid] < nums[0]){
             e = mid - 1;
         }
+        ans = nums[mid];
         if(s==e) ans = nums[s];
        }
     return ans;
