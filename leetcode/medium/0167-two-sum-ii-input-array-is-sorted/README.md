@@ -54,9 +54,9 @@ Explanation: The sum of -1 and 0 is -1. Therefore index1 = 1, index2 = 2. We ret
 ## Solution
 
 **Language:** Java  
-**Runtime:** 0 ms  
-**Memory:** 42.7 MB  
-**Submitted:** 2026-07-08T05:18:30.477Z  
+**Runtime:** 2 ms (beats 95.81%)  
+**Memory:** 48.4 MB (beats 61.08%)  
+**Submitted:** 2026-07-08T05:18:36.062Z  
 
 ```java
 class Solution {
