@@ -10,7 +10,7 @@ class Solution {
         int i = 0 ; 
         int j = 0;
         int k = 0;
-        while(k != mn / 2){
+        while(k < (mn / 2)){
             prev = curr;
             if(nums1[i] < nums2[j]){
                 curr = nums1[i];
