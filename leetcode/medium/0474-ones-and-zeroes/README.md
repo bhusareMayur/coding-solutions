@@ -45,15 +45,15 @@ Explanation: The largest subset is {"0", "1"}, so the answer is 2.
 
 **Language:** Java  
 **Runtime:** 0 ms  
-**Memory:** 42.1 MB  
-**Submitted:** 2026-07-09T06:07:04.142Z  
+**Memory:** 42.7 MB  
+**Submitted:** 2026-07-09T06:09:44.379Z  
 
 ```java
 class Solution {
     public int findMaxForm(String[] strs, int m, int n) {
         int count = 0;
         for(int i = 0 ; i < strs.length;i++){
-            if(strs[i].length() <= Math.max(m,n)) count++;
+            if(strs[i].length() <= Math.min(m,n)) count++;
             else if(strs[i].length() > m + n)continue;
             else{
                 int ones = 0;
