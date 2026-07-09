@@ -39,8 +39,8 @@ Explanation: You will always arrive at index 3 no matter what. Its maximum jump 
 
 **Language:** Java  
 **Runtime:** 0 ms  
-**Memory:** 42.3 MB  
-**Submitted:** 2026-07-09T05:07:02.511Z  
+**Memory:** 42 MB  
+**Submitted:** 2026-07-09T05:07:22.297Z  
 
 ```java
 class Solution {
@@ -51,7 +51,7 @@ class Solution {
         while(i < n && j < n){
             if(j == n-1) return true;
             if(nums[j] == 0) return false;
-            j = j + nums[j] - 1;
+            j = j + nums[j];
             i++;
         }
         return false;
