@@ -47,30 +47,27 @@ Explanation: Intervals [1,4] and [4,7] are considered overlapping.
 
 **Language:** Java  
 **Runtime:** 3 ms  
-**Memory:** 43.3 MB  
-**Submitted:** 2026-07-09T07:21:42.182Z  
+**Memory:** 43 MB  
+**Submitted:** 2026-07-09T07:25:08.594Z  
 
 ```java
 class Solution {
     public int[][] merge(int[][] arr) {
-        Arrays.sort(arr,Comparator.comparingDouble(o -> o[1]));
+        Arrays.sort(arr,Comparator.comparingDouble(o -> o[0]));
         List<int[]> ans = new ArrayList<>();
 
         int prevStart = arr[0][0];
         int prevEnd = arr[0][1];
-        for(int i = 1 ; i < arr.length-1;i++){
+        for(int i = 1 ; i < arr.length;i++){
             if(arr[i][0] <= prevEnd){
-                ans.add(new int[]{prevStart, arr[i][1]});
-                // prevStart = arr[i+1][0];
-                // prevEnd = arr[i][1];
+                prevEnd = Math.max(prevEnd, arr[i][1]);
 
             }else{
                 ans.add(new int[]{prevStart, prevEnd});
+                prevStart = arr[i][0];
+                prevEnd = arr[i][1];
 
             }
-            prevStart = arr[i+1][0];
-            prevEnd = arr[i][1];
-
         }
         int[][] array = ans.toArray(new int[0][]);
         return array;
