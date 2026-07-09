@@ -1,6 +1,7 @@
 class Solution {
     public int[][] merge(int[][] arr) {
-        Arrays.sort(arr,Comparator.comparingDouble(o -> o[0]));
+        // Arrays.sort(arr,Comparator.comparingDouble(o -> o[0]));
+        Arrays.sort(arr, (a, b) -> Integer.compare(a[0], b[0]));
         List<int[]> ans = new ArrayList<>();
 
         int prevStart = arr[0][0];
