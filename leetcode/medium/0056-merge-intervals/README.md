@@ -46,9 +46,9 @@ Explanation: Intervals [1,4] and [4,7] are considered overlapping.
 ## Solution
 
 **Language:** Java  
-**Runtime:** 12 ms (beats 9.81%)  
-**Memory:** 49 MB (beats 60.00%)  
-**Submitted:** 2026-07-09T07:25:34.215Z  
+**Runtime:** 3 ms  
+**Memory:** 43 MB  
+**Submitted:** 2026-07-09T08:23:38.087Z  
 
 ```java
 class Solution {
@@ -70,8 +70,9 @@ class Solution {
             }
         }
         ans.add(new int[]{prevStart, prevEnd});
-        int[][] array = ans.toArray(new int[0][]);
-        return array;
+        // int[][] array = ans.toArray(new int[0][]);
+        // return array;
+        return ans.toArray(new int[ans.size()][]);
     }
 }
 ```
