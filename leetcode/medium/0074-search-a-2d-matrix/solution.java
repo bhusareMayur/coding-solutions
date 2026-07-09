@@ -9,25 +9,28 @@ class Solution {
         
         int i =0;
         int j = m - 1;
-        int mid = 0;
+        int row = 0;
 
-        while(i < j){
-             mid = (i + j) / 2;
-            if(arr[0][mid] == t) return true;
-            if(arr[0][mid] < t){
+        while(i <= j){
+             int mid = i + (j - i) / 2;
+            if(t >= arr[mid][0] && t <= arr[mid][n - 1]) {
+                row = mid;
+                break;
+            }
+            if(arr[mid][0] > t){
                 j = mid-1;
             }
             else{
                 i = mid;
             }
         }
-         i =0;
+         i = 0;
          j = n - 1;
-        while(i < j){
-            int mid2 = (i+j)/2;
-            if(arr[mid][mid2] == t) return true;
-            else if(arr[mid][mid2] < t) i = mid+1;
-            else j = mid -1;
+        while(i <= j){
+            int mid2 =  i + (j - i) / 2;
+            if(arr[row][mid2] == t) return true;
+            else if(arr[row][mid2] < t) i = mid2+1;
+            else j = mid2 -1;
         }
         return false;
     }
