@@ -17,7 +17,8 @@ class Solution {
             }
         }
         ans.add(new int[]{prevStart, prevEnd});
-        int[][] array = ans.toArray(new int[0][]);
-        return array;
+        // int[][] array = ans.toArray(new int[0][]);
+        // return array;
+        return ans.toArray(new int[ans.size()][]);
     }
 }
