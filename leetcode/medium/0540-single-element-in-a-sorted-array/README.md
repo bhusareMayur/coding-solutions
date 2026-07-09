@@ -38,15 +38,15 @@ Output: 10
 ## Solution
 
 **Language:** Java  
-**Runtime:** 1 ms (beats 24.69%)  
-**Memory:** 52.8 MB (beats 77.01%)  
-**Submitted:** 2026-07-09T06:43:52.058Z  
+**Runtime:** 0 ms  
+**Memory:** 42.4 MB  
+**Submitted:** 2026-07-09T06:43:24.449Z  
 
 ```java
 class Solution {
     public int singleNonDuplicate(int[] nums) {
         int ans = nums[0];
-        for(int i = 1 ; i < nums.length;i++){
+        for(int i = 0 ; i < nums.length;i++){
             ans = ans ^ nums[i];
         }
         return ans;
