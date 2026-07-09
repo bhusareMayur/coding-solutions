@@ -32,14 +32,14 @@ class Solution {
                 i = mid+1;
             }
         }
-         i = 0;
-         j = n - 1;
-        while(i <= j){
-            int mid2 =  i + (j - i) / 2;
-            if(arr[row][mid2] == t) return true;
-            else if(arr[row][mid2] < t) i = mid2+1;
-            else j = mid2 -1;
-        }
+        //  i = 0;
+        //  j = n - 1;
+        // while(i <= j){
+        //     int mid2 =  i + (j - i) / 2;
+        //     if(arr[row][mid2] == t) return true;
+        //     else if(arr[row][mid2] < t) i = mid2+1;
+        //     else j = mid2 -1;
+        // }
         return false;
     }
 }
