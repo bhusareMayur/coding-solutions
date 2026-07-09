@@ -43,9 +43,9 @@ Output: false
 ## Solution
 
 **Language:** Java  
-**Runtime:** 0 ms  
-**Memory:** 42.5 MB  
-**Submitted:** 2026-07-09T06:36:44.052Z  
+**Runtime:** 0 ms (beats 100.00%)  
+**Memory:** 43.7 MB (beats 79.56%)  
+**Submitted:** 2026-07-09T06:37:54.351Z  
 
 ```java
 class Solution {
@@ -71,7 +71,7 @@ class Solution {
                 j = mid-1;
             }
             else{
-                i = mid;
+                i = mid+1;
             }
         }
          i = 0;
