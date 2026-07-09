@@ -6,7 +6,7 @@ class Solution {
         while(i < n && j < n){
             if(j == n-1) return true;
             if(nums[j] == 0) return false;
-            j = j + nums[j] - 1;
+            j = j + nums[j];
             i++;
         }
         return false;
