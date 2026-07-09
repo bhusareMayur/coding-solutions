@@ -43,9 +43,9 @@ Output: false
 ## Solution
 
 **Language:** Java  
-**Runtime:** 0 ms  
-**Memory:** 42.2 MB  
-**Submitted:** 2026-07-09T06:40:53.015Z  
+**Runtime:** 0 ms (beats 100.00%)  
+**Memory:** 43.7 MB (beats 79.56%)  
+**Submitted:** 2026-07-09T06:41:01.279Z  
 
 ```java
 class Solution {
@@ -82,14 +82,14 @@ class Solution {
                 i = mid+1;
             }
         }
-         i = 0;
-         j = n - 1;
-        while(i <= j){
-            int mid2 =  i + (j - i) / 2;
-            if(arr[row][mid2] == t) return true;
-            else if(arr[row][mid2] < t) i = mid2+1;
-            else j = mid2 -1;
-        }
+        //  i = 0;
+        //  j = n - 1;
+        // while(i <= j){
+        //     int mid2 =  i + (j - i) / 2;
+        //     if(arr[row][mid2] == t) return true;
+        //     else if(arr[row][mid2] < t) i = mid2+1;
+        //     else j = mid2 -1;
+        // }
         return false;
     }
 }
