@@ -47,13 +47,13 @@ With `k = 2`, a single sensor can cover the entire `2 * 2` grid regardless of it
 **Language:** Java  
 **Runtime:** 0 ms  
 **Memory:** 42.2 MB  
-**Submitted:** 2026-07-09T08:34:22.651Z  
+**Submitted:** 2026-07-09T08:35:10.728Z  
 
 ```java
 class Solution {
     public int minSensors(int n, int m, int k) {
         int ans = Math.max(m,n) - k;
-        if(ans == 0) return 1;
+        if(ans <= 0) return 1;
         return ans;
     }
 }
