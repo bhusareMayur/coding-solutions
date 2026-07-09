@@ -45,8 +45,8 @@ Explanation: The largest subset is {"0", "1"}, so the answer is 2.
 
 **Language:** Java  
 **Runtime:** 0 ms  
-**Memory:** 42.5 MB  
-**Submitted:** 2026-07-09T05:59:23.969Z  
+**Memory:** 42.1 MB  
+**Submitted:** 2026-07-09T06:07:04.142Z  
 
 ```java
 class Solution {
@@ -59,7 +59,7 @@ class Solution {
                 int ones = 0;
                 int zeroes = 0;
                 for(int j = 0;j<strs[i].length();j++){
-                    if(strs[i].charAt(i) == '1')ones++;
+                    if(strs[i].charAt(j) == '1')ones++;
                     else zeroes++;
                 }
                 if(ones <= n && zeroes <= m) count++;
