@@ -21,7 +21,7 @@ class Solution {
                 j = mid-1;
             }
             else{
-                i = mid;
+                i = mid+1;
             }
         }
          i = 0;
