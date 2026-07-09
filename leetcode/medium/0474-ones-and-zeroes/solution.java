@@ -2,7 +2,7 @@ class Solution {
     public int findMaxForm(String[] strs, int m, int n) {
         int count = 0;
         for(int i = 0 ; i < strs.length;i++){
-            if(strs[i].length() <= Math.max(m,n)) count++;
+            if(strs[i].length() <= Math.min(m,n)) count++;
             else if(strs[i].length() > m + n)continue;
             else{
                 int ones = 0;
