@@ -48,38 +48,31 @@ Output: [[0,0,0,0],[0,4,5,0],[0,3,1,0]]
 **Language:** Java  
 **Runtime:** 0 ms  
 **Memory:** 42.8 MB  
-**Submitted:** 2026-07-09T05:31:02.742Z  
+**Submitted:** 2026-07-09T05:42:37.801Z  
 
 ```java
 class Solution {
     public void setZeroes(int[][] m) {
         int m1 = m.length;
         int n = m[0].length;
-        HashMap<Integer,Integer> mp = new HashMap<>();
+        // HashMap<Integer,Integer> mp = new HashMap<>();
+        boolean row[] = new boolean[m1];
+        boolean col[] = new boolean[n];
+
 
         for(int i = 0 ; i <m1;i++){
             for(int j = 0 ; j <n;j++){
-                if(m[i][j] == 0) mp.put(i,j);
+                if(m[i][j] == 0){
+                    row[i] = true;
+                    col[j] = true;
+                }
             }
         }
-
-        for(Map.Entry<Integer, Integer> e : mp.entrySet()){
-            int i = e.getKey();
-            int j = e.getValue();
-            
-            // row j++
-            for(int y = 0;y<n;y++){
-                m[i][y] = 0;
+        for(int i = 0 ; i <m1;i++){
+            for(int j = 0 ; j <n;j++){
+                if(row[i] == true || col[j] == true) m[i][j] = 0;
             }
-            // col i++
-            for(int y = 0;y<m1;y++){
-                m[y][j] = 0;
-            }
-
-        }
-
-
-        
+        }    
     }
 }
 ```
