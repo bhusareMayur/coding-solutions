@@ -46,14 +46,15 @@ Explanation: Intervals [1,4] and [4,7] are considered overlapping.
 ## Solution
 
 **Language:** Java  
-**Runtime:** 13 ms (beats 6.06%)  
-**Memory:** 49.1 MB (beats 60.00%)  
-**Submitted:** 2026-07-09T08:23:43.486Z  
+**Runtime:** 8 ms (beats 91.69%)  
+**Memory:** 49.3 MB (beats 14.34%)  
+**Submitted:** 2026-07-09T08:24:33.510Z  
 
 ```java
 class Solution {
     public int[][] merge(int[][] arr) {
-        Arrays.sort(arr,Comparator.comparingDouble(o -> o[0]));
+        // Arrays.sort(arr,Comparator.comparingDouble(o -> o[0]));
+        Arrays.sort(arr, (a, b) -> Integer.compare(a[0], b[0]));
         List<int[]> ans = new ArrayList<>();
 
         int prevStart = arr[0][0];
