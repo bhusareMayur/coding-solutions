@@ -44,14 +44,18 @@ Output: false
 
 **Language:** Java  
 **Runtime:** 0 ms  
-**Memory:** 42.5 MB  
-**Submitted:** 2026-07-09T06:26:46.264Z  
+**Memory:** 42.3 MB  
+**Submitted:** 2026-07-09T06:28:29.390Z  
 
 ```java
 class Solution {
     public boolean searchMatrix(int[][] arr, int t) {
         int m = arr.length;
         int n = arr[0].length;
+        if(n == 1 && m == 1) {
+            if(arr[0][0] == t) return true;
+            else return false;
+        }
         
         int i =0;
         int j = m - 1;
