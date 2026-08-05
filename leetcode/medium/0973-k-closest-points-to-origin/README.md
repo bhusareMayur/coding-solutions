@@ -45,8 +45,8 @@ Explanation: The answer [[-2,4],[3,3]] would also be accepted.
 
 **Language:** Java  
 **Runtime:** 41 ms (beats 15.99%)  
-**Memory:** 56.2 MB (beats 31.05%)  
-**Submitted:** 2026-08-05T08:06:52.976Z  
+**Memory:** 56.6 MB (beats 29.25%)  
+**Submitted:** 2026-08-05T08:11:02.551Z  
 
 ```java
 class Solution {
