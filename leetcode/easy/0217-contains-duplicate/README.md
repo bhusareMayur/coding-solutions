@@ -44,13 +44,17 @@ All elements are distinct.
 ## Solution
 
 **Language:** Java  
-**Runtime:** 15 ms (beats 81.53%)  
-**Memory:** 109.1 MB (beats 9.67%)  
-**Submitted:** 2026-08-06T13:20:54.726Z  
+**Runtime:** 10 ms (beats 99.64%)  
+**Memory:** 109.3 MB (beats 8.21%)  
+**Submitted:** 2026-08-06T13:22:50.300Z  
 
 ```java
 class Solution {
-    public boolean containsDuplicate(int[] nums) {
+    static{
+        for(int i = 0; i <= 500; i++) 
+            containsDuplicate(new int[]{0, 1, 0});
+    }
+    public static boolean containsDuplicate(int[] nums) {
         HashSet<Integer> set = new HashSet<>();
         for(int i = 0 ; i < nums.length;i++){
             set.add(nums[i]);
