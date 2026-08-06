@@ -5,7 +5,6 @@ class Solution {
             set.add(nums[i]);
             if(set.size() !=  i+1)return true;
         }
-        if(set.size() == nums.length) return false;
-        return true;
+        return false;
     }
 }
