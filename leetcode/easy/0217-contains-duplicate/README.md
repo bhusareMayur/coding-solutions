@@ -44,9 +44,9 @@ All elements are distinct.
 ## Solution
 
 **Language:** Java  
-**Runtime:** 14 ms (beats 90.95%)  
-**Memory:** 109.2 MB (beats 8.21%)  
-**Submitted:** 2026-08-06T13:18:55.308Z  
+**Runtime:** 15 ms (beats 81.53%)  
+**Memory:** 109.1 MB (beats 9.67%)  
+**Submitted:** 2026-08-06T13:20:54.726Z  
 
 ```java
 class Solution {
@@ -56,8 +56,7 @@ class Solution {
             set.add(nums[i]);
             if(set.size() !=  i+1)return true;
         }
-        if(set.size() == nums.length) return false;
-        return true;
+        return false;
     }
 }
 ```
