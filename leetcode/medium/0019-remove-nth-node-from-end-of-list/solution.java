@@ -19,36 +19,15 @@ class Solution {
       
       if(size == 1 && n == 1) return null;
       if(size == n) return head.next;
-    System.out.println(size);
+    // System.out.println(size);
     n = size - n;
     temp = head;
     for(int i = 0 ; i <n-1;i++){
         temp = temp.next;
     }
     temp.next = temp.next.next;
-    System.out.println(temp.val);
+    // System.out.println(temp.val);
 
-
-
-
-
-
-
-return head;
-
-    //   if(size == 1 && n == 1) return null;
-    //   System.out.println(size);
-    // if(size < n) return head;
-    //   n = size - n;
-    //   System.out.println(n);
-    //   temp = head;
-    //   for(int i = 1;i<n;i++){
-    //     temp = temp.next;
-    //   }
-    //   if(temp.next.next == null) temp.next = null;
-    //   else
-    //   temp.next = temp.next.next;
-
-    //     return head;
+    return head;
     }
 }
