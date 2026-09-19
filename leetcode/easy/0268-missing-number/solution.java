@@ -6,9 +6,6 @@ class Solution {
             sum += nums[i];
         }
         int nm = (n*(n+1)) / 2;
-
-        // if(nm == sum ) return n;
-
         return nm - sum;
 
     }
