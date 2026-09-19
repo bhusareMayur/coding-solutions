@@ -63,8 +63,8 @@ We can remove it with 1 deletion.
 
 **Language:** Java  
 **Runtime:** 3 ms (beats 71.98%)  
-**Memory:** 86.5 MB (beats 89.51%)  
-**Submitted:** 2026-09-19T05:10:01.758Z  
+**Memory:** 86.3 MB (beats 93.32%)  
+**Submitted:** 2026-09-19T05:10:25.603Z  
 
 ```java
 class Solution {
@@ -77,15 +77,11 @@ class Solution {
             if(nums[mini] > nums[i]) mini  = i;
             if(nums[maxi] < nums[i]) maxi = i; 
         }
-        // System.out.println("maxi :"+maxi);
-        // System.out.println("mini :"+mini);
 
         int w1 = maxi > mini ? maxi + 1 : mini + 1;
         int w2 = maxi < mini ? n - maxi : n- mini;
         int w3 = maxi < mini ? (maxi + 1 + (n - mini)) : (mini + 1 + (n - maxi));
-        //  System.out.println("w1 :"+w1);
-        //  System.out.println("w2 :"+w2);
-        //  System.out.println("w3 :"+w3);
+
         int ans = Integer.MAX_VALUE;
         if(ans > w1) ans = w1;
         if(ans > w2) ans = w2;
