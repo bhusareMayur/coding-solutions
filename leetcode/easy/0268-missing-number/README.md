@@ -62,8 +62,8 @@ Given an array `nums` containing `n` distinct numbers in the range `[0, n]`, ret
 
 **Language:** Java  
 **Runtime:** 0 ms (beats 100.00%)  
-**Memory:** 47 MB (beats 91.20%)  
-**Submitted:** 2026-09-19T05:54:16.559Z  
+**Memory:** 47.2 MB (beats 81.80%)  
+**Submitted:** 2026-09-19T05:54:57.081Z  
 
 ```java
 class Solution {
@@ -74,9 +74,6 @@ class Solution {
             sum += nums[i];
         }
         int nm = (n*(n+1)) / 2;
-
-        // if(nm == sum ) return n;
-
         return nm - sum;
 
     }
