@@ -55,27 +55,24 @@ It is not required to do the modifications in-place.
 ## Solution
 
 **Language:** Java  
-**Runtime:** 6 ms (beats 16.34%)  
-**Memory:** 175 MB (beats 79.82%)  
-**Submitted:** 2026-09-20T06:52:24.369Z  
+**Runtime:** 3 ms (beats 100.00%)  
+**Memory:** 175.7 MB (beats 28.70%)  
+**Submitted:** 2026-09-20T06:54:15.334Z  
 
 ```java
 class Solution {
     public int[] rearrangeArray(int[] nums) {
         int[] ans = new int[nums.length];
-        int j =0;
-        for(int i =0;i<nums.length;i++){
-            if(nums[i] >= 0) {
+        int j = 0;
+        int k = 1;
+        for (int i = 0; i < nums.length; i++) {
+            if (nums[i] >= 0) {
                 ans[j] = nums[i];
                 j += 2;
-                }
-        }
-        j=1;
-        for(int i =0;i<nums.length;i++){
-            if(nums[i] < 0) {
-                ans[j] = nums[i];
-                j += 2;
-                }
+            } else {
+                ans[k] = nums[i];
+                k += 2;
+            }
         }
         return ans;
     }
