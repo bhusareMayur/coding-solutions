@@ -47,27 +47,27 @@ Output: 3
 **Language:** Java  
 **Runtime:** 30 ms (beats 73.76%)  
 **Memory:** 95.7 MB (beats 27.32%)  
-**Submitted:** 2026-09-20T12:43:17.160Z  
+**Submitted:** 2026-09-20T12:45:36.479Z  
 
 ```java
 class Solution {
     public int longestConsecutive(int[] nums) {
         int n = nums.length;
         HashSet<Integer> s = new HashSet<>();
-        for(int i = 0 ; i<n;i++){
+        for (int i = 0; i < n; i++) {
             s.add(nums[i]);
         }
         int maxLength = 0;
-        for(int num : s){
-            if(!s.contains(num - 1)){
-            int currLength = 1;
-            int temp = num;
-            while(s.contains(temp+1)){
-               temp++;
-               currLength++;
+        for (int num : s) {
+            if (!s.contains(num - 1)) {
+                int currLength = 1;
+                int temp = num;
+                while (s.contains(temp + 1)) {
+                    temp++;
+                    currLength++;
+                }
+                maxLength = Math.max(currLength, maxLength);
             }
-            maxLength = Math.max(currLength,maxLength);
-         }
         }
         return maxLength;
     }
