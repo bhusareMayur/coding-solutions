@@ -43,9 +43,9 @@ Output: [0,0,9,0,0]
 ## Solution
 
 **Language:** Java  
-**Runtime:** 353 ms (beats 2.83%)  
-**Memory:** 70.3 MB (beats 67.91%)  
-**Submitted:** 2026-09-21T06:24:44.506Z  
+**Runtime:** 2 ms  
+**Memory:** 42.6 MB  
+**Submitted:** 2026-09-21T06:24:09.662Z  
 
 ```java
 class Solution {
@@ -53,9 +53,9 @@ class Solution {
         int n = nums.length;
 
         int[] p = new int[n];
-        p[0]=1;
         int s = 1;
         // int[] s = new int[n];
+        p[0]=1;
         // s[n-1] = 1;
         for(int i = 1 ; i <n;i++){
             p[i] = p[i-1]*nums[i-1];
