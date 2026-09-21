@@ -38,8 +38,8 @@ Output: [[15,13,2,5],[14,3,4,1],[12,6,8,9],[16,7,10,11]]
 
 **Language:** Java  
 **Runtime:** 0 ms (beats 100.00%)  
-**Memory:** 43.7 MB (beats 70.65%)  
-**Submitted:** 2026-09-21T09:27:54.326Z  
+**Memory:** 43.4 MB (beats 93.15%)  
+**Submitted:** 2026-09-21T09:28:07.797Z  
 
 ```java
 class Solution {
@@ -55,6 +55,8 @@ class Solution {
             }
         }
 
+
+        // reverse the rows 
         for(int i = 0 ; i < n;i++){
             int j = 0;
             int k = n-1;
