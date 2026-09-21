@@ -5,9 +5,9 @@ class Solution {
         int[] p = new int[n];
         int s = 1;
         p[0]=1;
-        // int[] ans = new int[n];
         for(int i = 1 ; i <n;i++){
             p[i] = p[i-1]*nums[i-1];
+            // System.out.print(p[i]+" , ");
         }
         for(int i = n-1 ; i >=0;i--){
             p[i] *= s;
