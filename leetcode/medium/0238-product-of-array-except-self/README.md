@@ -43,9 +43,9 @@ Output: [0,0,9,0,0]
 ## Solution
 
 **Language:** Java  
-**Runtime:** 349 ms (beats 2.83%)  
-**Memory:** 72.2 MB (beats 30.08%)  
-**Submitted:** 2026-09-21T06:23:20.632Z  
+**Runtime:** 353 ms (beats 2.83%)  
+**Memory:** 70.3 MB (beats 67.91%)  
+**Submitted:** 2026-09-21T06:24:44.506Z  
 
 ```java
 class Solution {
@@ -53,25 +53,25 @@ class Solution {
         int n = nums.length;
 
         int[] p = new int[n];
-        // int s = 1;
-        int[] s = new int[n];
         p[0]=1;
-        s[n-1] = 1;
+        int s = 1;
+        // int[] s = new int[n];
+        // s[n-1] = 1;
         for(int i = 1 ; i <n;i++){
             p[i] = p[i-1]*nums[i-1];
             System.out.print(p[i]+" , ");
         }
-        for(int i =n-2 ; i >=0;i--){
-            s[i] = s[i+1]*nums[i+1];
-            // System.out.print(s[i]+" , ");
-        }
-        for(int i = 0 ; i < n;i++){
-            p[i] = p[i] * s[i];
-        }
-        // for(int i = n-1 ; i >=0;i--){
-        //     p[i] *= s;
-        //     s *= nums[i];
+        // for(int i =n-2 ; i >=0;i--){
+        //     s[i] = s[i+1]*nums[i+1];
+        //     // System.out.print(s[i]+" , ");
         // }
+        // for(int i = 0 ; i < n;i++){
+        //     p[i] = p[i] * s[i];
+        // }
+        for(int i = n-1 ; i >=0;i--){
+            p[i] *= s;
+            s *= nums[i];
+        }
 
         return p;
         
