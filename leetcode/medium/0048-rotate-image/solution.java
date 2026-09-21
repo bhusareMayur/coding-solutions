@@ -1,7 +1,6 @@
 class Solution {
     public void rotate(int[][] m) {
         int n = m.length;
-        // 90 degree : Transpose  + reverse each row
 
         // Transpose
         for (int i = 0; i < n; i++) {
