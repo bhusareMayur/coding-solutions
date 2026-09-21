@@ -38,14 +38,13 @@ Output: [[15,13,2,5],[14,3,4,1],[12,6,8,9],[16,7,10,11]]
 
 **Language:** Java  
 **Runtime:** 0 ms (beats 100.00%)  
-**Memory:** 43.5 MB (beats 85.41%)  
-**Submitted:** 2026-09-21T09:30:03.811Z  
+**Memory:** 43.5 MB (beats 93.15%)  
+**Submitted:** 2026-09-21T09:28:20.787Z  
 
 ```java
 class Solution {
     public void rotate(int[][] m) {
         int n = m.length;
-        // 90 degree : Transpose  + reverse each row
 
         // Transpose
         for (int i = 0; i < n; i++) {
