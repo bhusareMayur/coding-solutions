@@ -11,6 +11,8 @@ class Solution {
             }
         }
 
+
+        // reverse the rows 
         for(int i = 0 ; i < n;i++){
             int j = 0;
             int k = n-1;
