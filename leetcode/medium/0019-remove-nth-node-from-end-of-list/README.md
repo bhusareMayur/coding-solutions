@@ -49,8 +49,8 @@ Output: [1]
 
 **Language:** Java  
 **Runtime:** 0 ms (beats 100.00%)  
-**Memory:** 43.3 MB (beats 89.65%)  
-**Submitted:** 2026-08-28T13:31:47.656Z  
+**Memory:** 43 MB (beats 97.11%)  
+**Submitted:** 2026-09-23T04:13:51.268Z  
 
 ```java
 /**
@@ -65,25 +65,21 @@ Output: [1]
  */
 class Solution {
     public ListNode removeNthFromEnd(ListNode head, int n) {
-      ListNode temp = head;
-      int size = 1;
-      while(temp.next != null){
-        temp = temp.next;
-        size++;
-      }
-      
-      if(size == 1 && n == 1) return null;
-      if(size == n) return head.next;
-    // System.out.println(size);
-    n = size - n;
-    temp = head;
-    for(int i = 0 ; i <n-1;i++){
-        temp = temp.next;
-    }
-    temp.next = temp.next.next;
-    // System.out.println(temp.val);
-
-    return head;
+        ListNode temp = head;
+        int size = 1;
+        while(temp.next != null){
+            temp = temp.next;
+            size++;
+        }
+        if(size == n) return head.next;
+        // System.out.println(size);
+        if(size == 1 && n == 1) return null;
+        temp = head;
+        for(int i = 0 ; i < size-n-1;i++){
+            temp = temp.next;
+        } 
+        temp.next = temp.next.next;
+        return head;
     }
 }
 ```
