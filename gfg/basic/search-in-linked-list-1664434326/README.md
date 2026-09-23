@@ -27,7 +27,7 @@ Explanation: 4 is not present in Linked List.
 **Language:** Java  
 **Runtime:** N/A  
 **Memory:** N/A  
-**Submitted:** 2026-09-23T05:08:46.943Z  
+**Submitted:** 2026-09-23T05:11:20.035Z  
 
 ```java
 /* Structure of Linked List Node
