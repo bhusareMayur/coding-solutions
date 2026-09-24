@@ -35,9 +35,9 @@ Output: [2,0,1]
 ## Solution
 
 **Language:** Java  
-**Runtime:** 0 ms  
-**Memory:** 42.6 MB  
-**Submitted:** 2026-09-24T05:12:59.365Z  
+**Runtime:** 0 ms (beats 100.00%)  
+**Memory:** 44.2 MB (beats 62.44%)  
+**Submitted:** 2026-09-24T05:13:20.299Z  
 
 ```java
 /**
@@ -66,7 +66,7 @@ class Solution {
         for(int i = 0 ;i<j-1;i++){
             temp = temp.next;
         }
-        System.out.println(temp.val);
+        // System.out.println(temp.val);
         ListNode dummy = temp.next;
         temp.next = null;
         ListNode ans = dummy;
