@@ -35,9 +35,9 @@ Output: [2,0,1]
 ## Solution
 
 **Language:** Java  
-**Runtime:** 2 ms (beats 2.09%)  
-**Memory:** 44.5 MB (beats 25.59%)  
-**Submitted:** 2026-09-24T05:13:03.705Z  
+**Runtime:** 0 ms (beats 100.00%)  
+**Memory:** 44.3 MB (beats 44.03%)  
+**Submitted:** 2026-09-24T05:13:55.517Z  
 
 ```java
 /**
@@ -60,13 +60,12 @@ class Solution {
         }
         if(n == 0) return null;
         if(k % n == 0)return head;
-        int j = n - (k % n);
+        int j = n - (k % n)-1;
          temp = head;
 
-        for(int i = 0 ;i<j-1;i++){
+        for(int i = 0 ;i<j;i++){
             temp = temp.next;
         }
-        System.out.println(temp.val);
         ListNode dummy = temp.next;
         temp.next = null;
         ListNode ans = dummy;
