@@ -1,43 +1,43 @@
-/*
-delete n nodes after m nodes
-The input list will have at least one element
-Node is defined as
-  class Node
+/* Structure of Linked List Node
+class Node
+{
+  int data;
+  Node next;
+  Node(int data)
   {
-      int data;
-      Node next;
-      Node(int data)
-      {
-          this.data = data;
-          this.next = null;
-      }
+      this.data = data;
+      this.next = null;
   }
-*/
+}*/
 
 class Solution {
-    static void linkdelete(Node head, int n, int m) {
-        // your code here
+    static void linkDelete(Node head, int n, int m) {
+        // code here
         Node temp = head;
-        while (temp != null) {
-        int i = 1;
-        while(i < m && temp != null){
-         temp = temp.next;   
-         i++;
+        while(temp != null){
+            int i = m;
+            int j = n;
+        while(temp != null && i > 1){
+            temp = temp.next;
+            i--;
         }
+        // System.out.println(temp.data);
+        Node temp2 = temp;
+         while(temp2 != null && j >= 0){
+            temp2 = temp2.next;
+            j--;
+        }
+        if(temp2 == null){
+        if(temp != null) 
+            temp.next = null;
+            
+            break;
+        }
+            
         
-         if (temp == null) return;
-
-            Node temp2 = temp.next;
-
-        
-            i = 1;
-            while (i <= n && temp2 != null) {
-                temp2 = temp2.next;
-                i++;
-            }
-            temp.next = temp2;
-
-            temp = temp2;
+        temp.next = temp2;
+        if(temp.next == null) continue;
+        temp = temp.next;
         
         }
     }
