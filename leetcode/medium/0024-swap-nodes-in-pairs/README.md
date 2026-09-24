@@ -45,8 +45,8 @@ Given a linked list, swap every two adjacent nodes and return its head. You mus
 
 **Language:** Java  
 **Runtime:** 0 ms (beats 100.00%)  
-**Memory:** 43 MB (beats 48.18%)  
-**Submitted:** 2026-09-24T11:09:26.706Z  
+**Memory:** 42.8 MB (beats 82.71%)  
+**Submitted:** 2026-09-24T11:24:25.183Z  
 
 ```java
 /**
@@ -65,14 +65,18 @@ class Solution {
 
         ListNode a = head;
         ListNode b = head.next;
+        head = b;
         while(a != null && b != null){
-            int temp = a.val;
-            a.val = b.val;
-            b.val = temp;
+            ListNode c = b.next;
+            a.next = c;
+            b.next = a;
             
             if(a.next == null || a.next.next == null || b.next == null || b.next.next == null) break;
-            a = a.next.next;
-            b = b.next.next;
+
+            a.next = c.next; 
+
+            a =c;
+            b = c.next;
         }
         return head;
     }
