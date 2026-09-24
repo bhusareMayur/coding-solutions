@@ -35,7 +35,6 @@ class Solution {
             res.next = temp;
             res = res.next;
             a = a.next;
-            // b = b.next;
         }
         while(b != null){
             int sum = b.val + carry;
@@ -44,7 +43,6 @@ class Solution {
             ListNode temp = new ListNode(t);
             res.next = temp;
             res = res.next;
-            // a = a.next;
             b = b.next;
         }
         if(carry != 0){
