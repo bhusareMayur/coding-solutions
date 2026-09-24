@@ -56,9 +56,9 @@ Output: [[3,null],[3,0],[3,null]]
 ## Solution
 
 **Language:** Java  
-**Runtime:** 0 ms  
-**Memory:** 42.6 MB  
-**Submitted:** 2026-09-24T13:04:40.586Z  
+**Runtime:** 0 ms (beats 100.00%)  
+**Memory:** 46.4 MB (beats 86.89%)  
+**Submitted:** 2026-09-24T13:04:44.862Z  
 
 ```java
 /*
