@@ -58,7 +58,7 @@ Output: [[3,null],[3,0],[3,null]]
 **Language:** Java  
 **Runtime:** 0 ms  
 **Memory:** 42.6 MB  
-**Submitted:** 2026-09-24T13:04:04.364Z  
+**Submitted:** 2026-09-24T13:04:40.586Z  
 
 ```java
 /*
@@ -78,7 +78,7 @@ class Node {
 
 class Solution {
     public Node copyRandomList(Node head) {
-        if(head == null || head.next == null)return head;
+        if(head == null )return head;
         HashMap<Node,Node> map = new HashMap<>();
         Node temp = head;
         while(temp != null){
