@@ -47,8 +47,8 @@ Output: [8,9,9,9,0,0,0,1]
 
 **Language:** Java  
 **Runtime:** 1 ms (beats 100.00%)  
-**Memory:** 46.6 MB (beats 38.12%)  
-**Submitted:** 2026-09-24T09:56:05.076Z  
+**Memory:** 46.4 MB (beats 57.59%)  
+**Submitted:** 2026-09-24T10:13:28.166Z  
 
 ```java
 /**
@@ -88,7 +88,6 @@ class Solution {
             res.next = temp;
             res = res.next;
             a = a.next;
-            // b = b.next;
         }
         while(b != null){
             int sum = b.val + carry;
@@ -97,7 +96,6 @@ class Solution {
             ListNode temp = new ListNode(t);
             res.next = temp;
             res = res.next;
-            // a = a.next;
             b = b.next;
         }
         if(carry != 0){
