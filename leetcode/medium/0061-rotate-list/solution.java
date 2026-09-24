@@ -24,7 +24,7 @@ class Solution {
         for(int i = 0 ;i<j-1;i++){
             temp = temp.next;
         }
-        System.out.println(temp.val);
+        // System.out.println(temp.val);
         ListNode dummy = temp.next;
         temp.next = null;
         ListNode ans = dummy;
