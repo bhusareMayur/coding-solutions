@@ -22,19 +22,19 @@ class Solution {
 			curr = temp;
 			tail = temp;
 			// prev = tail;
-// 			Node check = temp;
-// 			boolean canReverse = true;
-// 			for (int c = 1; c < k; c++) {
-// 				if (check == null || check.next == null) {
-// 					canReverse = false;
-// 					break;
-// 				}
-// 				check = check.next;
-// 			}
+			// 			Node check = temp;
+			// 			boolean canReverse = true;
+			// 			for (int c = 1; c < k; c++) {
+			// 				if (check == null || check.next == null) {
+			// 					canReverse = false;
+			// 					break;
+			// 				}
+			// 				check = check.next;
+			// 			}
 			while (i > 1 && tail != null) {
 				if (tail.next == null) {
 					break;
-				// 	return head;
+					// 	return head;
 				}
 				// prev = tail;
 				tail = tail.next;
