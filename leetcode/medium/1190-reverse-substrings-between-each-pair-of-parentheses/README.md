@@ -50,8 +50,8 @@ Explanation: First, we reverse the substring "oc", then "etco", and finally, the
 
 **Language:** Java  
 **Runtime:** 6 ms (beats 44.83%)  
-**Memory:** 43 MB (beats 85.97%)  
-**Submitted:** 2026-09-27T16:09:44.887Z  
+**Memory:** 42.8 MB (beats 90.82%)  
+**Submitted:** 2026-09-27T16:10:34.211Z  
 
 ```java
 class Solution {
@@ -64,7 +64,6 @@ class Solution {
             else if(s.charAt(i) == ')') rev(sb , st.pop() , i);
             else continue;
         }
-        // return sb.toString();
           StringBuilder ans = new StringBuilder();
         for(int i = 0;i < sb.length();i++){
             if(sb.charAt(i) == '(' || sb.charAt(i) == ')') continue;
