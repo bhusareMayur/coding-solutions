@@ -8,7 +8,6 @@ class Solution {
             else if(s.charAt(i) == ')') rev(sb , st.pop() , i);
             else continue;
         }
-        // return sb.toString();
           StringBuilder ans = new StringBuilder();
         for(int i = 0;i < sb.length();i++){
             if(sb.charAt(i) == '(' || sb.charAt(i) == ')') continue;
