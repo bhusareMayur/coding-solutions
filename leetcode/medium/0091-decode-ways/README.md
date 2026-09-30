@@ -73,8 +73,8 @@ The test cases are generated so that the answer fits in a  **32-bit**  integer.
 
 **Language:** Java  
 **Runtime:** 0 ms  
-**Memory:** 42.5 MB  
-**Submitted:** 2026-09-30T05:12:07.744Z  
+**Memory:** 42.6 MB  
+**Submitted:** 2026-09-30T05:16:48.672Z  
 
 ```java
 class Solution {
@@ -82,13 +82,18 @@ class Solution {
         int n = s.length();
 
         boolean isZero = false;
+        boolean isValid = false;
         for(int i = 0;i<n;i++){
             if(s.charAt(i) == '0'){
+                if(i != 0 && (s.charAt(i-1) == 1 || s.charAt(i-1) == 2)){
+                    isValid = true;
+                }
                 isZero = true;
                 break;
             }
         }
-        if(isZero) return 0;
+        if(isZero && isValid == false) return 0;
+        else if(isValid) return n -1;
         return n;
     }
 }
