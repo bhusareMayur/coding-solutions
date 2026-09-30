@@ -74,7 +74,7 @@ The test cases are generated so that the answer fits in a  **32-bit**  integer.
 **Language:** Java  
 **Runtime:** 0 ms  
 **Memory:** 42.6 MB  
-**Submitted:** 2026-09-30T05:16:48.672Z  
+**Submitted:** 2026-09-30T05:26:15.861Z  
 
 ```java
 class Solution {
@@ -85,15 +85,17 @@ class Solution {
         boolean isValid = false;
         for(int i = 0;i<n;i++){
             if(s.charAt(i) == '0'){
-                if(i != 0 && (s.charAt(i-1) == 1 || s.charAt(i-1) == 2)){
+                if(i != 0 && (s.charAt(i-1) == '1' || s.charAt(i-1) == '2')){
                     isValid = true;
                 }
                 isZero = true;
                 break;
             }
         }
+        // System.out.print(isZero);
+        // System.out.print( isValid);
         if(isZero && isValid == false) return 0;
-        else if(isValid) return n -1;
+        else if(isValid) return n-1;
         return n;
     }
 }
