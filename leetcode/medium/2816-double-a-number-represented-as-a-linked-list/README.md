@@ -39,9 +39,9 @@ Explanation: The figure above corresponds to the given linked list which represe
 ## Solution
 
 **Language:** Java  
-**Runtime:** 4 ms (beats 79.60%)  
-**Memory:** 48.5 MB (beats 49.57%)  
-**Submitted:** 2026-09-24T05:53:42.850Z  
+**Runtime:** 4 ms (beats 80.45%)  
+**Memory:** 48.6 MB (beats 16.42%)  
+**Submitted:** 2026-10-09T17:13:21.537Z  
 
 ```java
 /**
