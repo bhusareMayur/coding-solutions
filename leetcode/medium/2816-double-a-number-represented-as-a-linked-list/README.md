@@ -40,8 +40,8 @@ Explanation: The figure above corresponds to the given linked list which represe
 
 **Language:** Java  
 **Runtime:** 4 ms (beats 80.45%)  
-**Memory:** 48.6 MB (beats 16.42%)  
-**Submitted:** 2026-10-09T17:13:21.537Z  
+**Memory:** 48.7 MB (beats 8.21%)  
+**Submitted:** 2026-10-09T17:13:35.178Z  
 
 ```java
 /**
